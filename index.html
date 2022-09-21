@@ -1,0 +1,112 @@
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/reset.css">
+    </head>
+    <body>
+
+        <div class="top">
+            <h2> Signup for our newsletter </h2>
+            <p> Get the latest news on how your code is doing right in your
+                inbox
+            </p>
+        </div>
+        <div class="wrapper">
+            <hr class="thick">
+            <hr>
+            <form>
+                <fieldset class="contact">
+                    <h4> Contact Information </h4>
+                    <div class="contact_input">
+                        <label for="id_fullName"> Full Name </label>
+                        <input type="text" name="Full Name" id="id_fullName"
+                            required>
+                    </div>
+                    <br> <br>
+                    <div class="contact_input">
+                    <label for="id_email"> Email Address </label>
+                    <input type="email" name="email" id="id_email" required>
+                    </div>
+                    <br> <br>
+                    <div class="contact_input">
+                    <label for="id_phone"> Phone Number </label>
+                    <input type="tel" name="phone" id="id_phone">
+                    <br> <br>
+                    </div>
+                    <div class="contact_input">
+                    <label for="id_street"> Street Address </label>
+                    <input type="text" name="street" id="id_street">
+                    <br> <br>
+                    </div>
+                    <div class="contact_input">
+                    <label for="id_city"> City </label>
+                    <input type="text" name="city" id="id_city">
+                    <br> <br>
+                    </div>
+                    <div class="contact_input">
+                    <label for="id_state"> State </label>
+                    <select name="state" id="id_state">
+                        <option value="1"> España </option>
+                        <option value="2"> Alemania </option>
+                        <option value="3"> Francia </option>
+                    </select>
+                    </div>
+                    <br> <br>
+                    <div class="contact_input">
+                    <label for="id_zipCode"> Zip Code </label>
+                    <input type="text" name="zipCode" id="id_zipCode">
+                    </div>
+                    </fieldset>
+                    <hr>
+                    <fieldset class="news radio checkbox">
+                        <legend> Newsletter </legend>
+                        <label>Select the newsletters you would like to recive</label><br>
+                        <br>
+                        <input type="checkbox" name="htmlNews"
+                            id="id_htmlNews" value="3">
+                            <label for="newshtml">HTML News</label><br>
+                        
+                    <br>
+                    <input type="checkbox" name="css"
+                    id="id_css" value="2">
+                    <label for="css">CSS News</label><br>
+                
+                    <br>
+                    
+                    <input type="checkbox" name="jsNews"
+                            id="id_jsNews" value="1">
+                            <label for="newsJs">Javascript News</label><br>
+                        
+                    <br>
+                    <br>
+                    <label>Newsletter format</label><br> <br>
+                    <input type="radio" name="html" id="id_html">
+                    <label for="html"> HTML </label>
+                    <br> <br>
+                    <input type="radio" name="plainText" id="id_plainText">
+                    <label> Plain text </label> <br> <br>
+                    
+                    <br> <br>
+                    <label for="id_otherTopics"> Other topics you'd like to
+                        hear
+                        about </label>
+                    <br> <br>
+                    <textarea id="id_otherTopics" name="otherTopics"
+                        rows="10"
+                        cols="50"></textarea>
+                    <br> <br>
+                    </fieldset>
+
+                    <button type="submit"> Sign up </button>
+                    </form>
+                    </div>
+
+                </section>
+            </main>
+        </body>
+    </html>
