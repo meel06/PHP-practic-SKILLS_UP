@@ -5,9 +5,8 @@
     "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-        //echo "<br><strong>Metodo post enviado</strong><br>;
-
+        print_r ($_POST);
+        echo "<br><strong>Metodo post enviado</strong><br>";
         if (!empty($_POST["name"]) || !empty($_POST["email"]) || !empty($_POST["phone"]))
         echo "<br><strong>name post hay datos</strong><br>";
         $name= $_POST["name"];
@@ -15,12 +14,11 @@
         $phone= $_POST["phone"];
         $address= $_POST["address"];
         $city= $_POST["city"];
-        $communities= $_POST["communities"];
+        $communities= $_POST["Autonomous communities"];
         $Zcode= $_POST["Zcode"];
         $format= $_POST["format"];
         $newscheck= $_POST["newscheck"];
         $text= $_POST["text"];
-        $other
 
         function limpiar_dato($data){
             $data = trim(data);
@@ -50,7 +48,28 @@
 
                 }
             }
-                
         
-    }
+
+            // Terminar las validaciones.
+            /**
+                
+             */
+                
+
+
+             // Algoritmo Enviar formulario 
+/*/ 
+Si (llega datos) 
+Entonces 
+tratamos datos Si si hay información Entonces 
+limpiar la información. validar la informaciñon. Si datos necesarios Entonces 
+asegurar de que están bien escrito. Sino 
+mandamos dato tal cual. Fin Si 
+Mostrar que todos los datos son correctos para enviar a BBDD. Sino 
+enviar datos necesarios Fin Si SiNo 
+avisar no han llegado. Fin Si FinAlgoritmo 
+/*/
+
+        
+    
 ?>
