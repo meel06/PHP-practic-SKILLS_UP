@@ -7,7 +7,7 @@ $name = $email = $phone = $address = $city = $communities = $Zcode = $format = $
 
 function limpiar_dato($data)
 {
-    $data = trim(data);
+    $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;

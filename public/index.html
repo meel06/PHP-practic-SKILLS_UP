@@ -29,32 +29,32 @@
                 <h4> Contact Information </h4>
                 <div class="contact_input">
                     <label for="name"> Full Name </label>
-                    <input type="text" name="name[]" id="name" placeholder="Required" required" required>
+                    <input type="text" name="name" id="name" placeholder="Required" required" required>
                 </div>
                 <br> <br>
                 <div class="contact_input">
                     <label for="email"> Email Address </label>
-                    <input type="email" name="email[]" id="email" placeholder="Required" required>
+                    <input type="email" name="email" id="email" placeholder="Required" required>
                 </div>
                 <br> <br>
                 <div class="contact_input">
                     <label for="phone"> Phone Number </label>
-                    <input type="tel" name="phone[]" id="phone">
+                    <input type="tel" name="phone" id="phone">
                     <br> <br>
                 </div>
                 <div class="contact_input">
                     <label for="address"> Street Address </label>
-                    <input type="text" name="address[]" id="address">
+                    <input type="text" name="address" id="address">
                     <br> <br>
                 </div>
                 <div class="contact_input">
                     <label for="city"> City </label>
-                    <input type="text" name="city[]" id="city">
+                    <input type="text" name="city" id="city">
                     <br> <br>
                 </div>
                 <div class="contact_input">
                     <label for="communities"> Autonomous communities </label>
-                    <select name="communities" id="Autonomous communities">
+                    <select name="communities" id="communities">
                         <option value="0" selected disabled hidden>Choose your option</option>
                         <option value="Andalucí­a">Andalucí­a</option>
                         <option value="Aragón">Aragón</option>
@@ -79,8 +79,8 @@
                 </div>
                 <br> <br>
                 <div class="contact_input">
-                    <label id="label_Zcode" for="Zcode">Zip Code</label><br>
-                    <input type="text" name="Zcode[]" id="Zcode">
+                    <label id="Zcode" for="Zcode">Zip Code</label><br>
+                    <input type="text" name="Zcode" id="Zcode">
                 </div>
             </fieldset>
             <hr>
@@ -89,21 +89,21 @@
                 <legend> Newsletter </legend>
                 <label>Select the newsletters you would like to recive</label><br>
                 <br>
-                <input id="newshtml" type="checkbox" value="HTML">
+                <input id="newshtml" type="checkbox" value="HTML" name="newshtml[]">
                 <label for="newshtml">HTML News</label><br>
                 <br>
-                <input id="newscss" type="checkbox" value="CSS">
+                <input id="newscss" type="checkbox" value="CSS" name="newcss">
                 <label for="newscss">CSS News</label><br>
                 <br>
-                <input id="newsjs" type="checkbox" value="JS">
+                <input id="newsjs" type="checkbox" value="JS" name="newjs">
                 <label for="newsjs">Javascript News</label><br>
                 <br>
                 <label>Newsletter format</label><br>
                 <br>
-                <input id="fhtml" type="radio" name="format" value="fhtml">
+                <input id="fhtml" type="radio" name="format" value="fhtml" name="fhtml">
                 <label for="fhtml">HTML</label><br>
                 <br>
-                <input id="fplaintxt" type="radio" name="format" value="fplaintxt">
+                <input id="fplaintxt" type="radio" name="format" value="fplaintxt" name="fplaintext">
                 <label for="fplaintxt">Plain text</label><br>
                 <br>
                 <label for="othert">Other topics you'd like to hear about</label><br>
