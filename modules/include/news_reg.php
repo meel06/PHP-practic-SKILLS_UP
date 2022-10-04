@@ -78,76 +78,75 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
             // A las variables que pueden ser NULL añadir if para guardar en BBDD como NULL
 
-        if (isset($_POST["address"])) {
-            $address = limpiar_dato($_POST["address"]);
+            if (isset($_POST["address"])) {
+                $address = limpiar_dato($_POST["address"]);
+            } else {
+                $address = null;
+            }
+            if (isset($_POST["city"])){
+                $city = limpiar_dato($_POST["city"]);
+            } else{
+                $city = NULL;
+            }
+            
+            if (isset($_POST["communities"])){
+                $communities = limpiar_dato($_POST["communities"]);
+            } else{
+                $communities = NULL;
+            }
+            
+            if (isset($_POST["Zcode"])){
+                $Zcode = limpiar_dato($_POST["Zcode"]);
+            } else{
+                $Zcode = NULL;
+            } 
+            
+            if (isset($_POST["newscheck"])){
+                $newscheck = limpiar_dato($_POST["newscheck"]);
+            } else{
+                $newscheck = NULL;
+            }
+
+            if (isset($_POST["format"])){
+                $format = limpiar_dato($_POST["format"]);
+            } else{
+                $format = NULL;
+            }
+
+            if (isset($_POST["text"])){
+                $text = limpiar_dato($_POST["text"]);
+            } else{
+                $text = NULL;
+            }
+            // ============================================================= BORRAME
+            
+            echo "<br><strong>Name: </strong>".$name ."<br>";
+            
+            echo "<br><strong>Email: </strong>".$email ."<br>";
+            
+            echo "<br><strong>Teléfono: </strong>".$phone ."<br>";
+            
+            // ============================================================= BORRAME
         } else {
-            $address = null;
-        }
-        if (isset($_POST["city"])){
-            $city = limpiar_dato($_POST["city"]);
-        } else{
-            $city = NULL;
-        }
-        
-        if (isset($_POST["communities"])){
-            $communities = limpiar_dato($_POST["communities"]);
-        } else{
-            $communities = NULL;
-        }
-        
-        if (isset($_POST["Zcode"])){
-            $Zcode = limpiar_dato($_POST["Zcode"]);
-        } else{
-            $Zcode = NULL;
-        } 
-        
-        if (isset($_POST["newscheck"])){
-            $newscheck = limpiar_dato($_POST["newscheck"]);
-        } else{
-            $newscheck = NULL;
+            echo "Fallo las validaciones";
+            if ($name_err == true){
+                echo "La validación de Nombre ha fallado<br>";
+            } elseif ($email_err == true) {
+                echo "La validación de Email ha fallado<br>";
+            } elseif ($phone_err == true) {
+                echo "La validación de Teléfono ha fallado<br>";
+            }
         }
 
-        $address = limpiar_dato($_POST["address"]);
-        $city = limpiar_dato($_POST["city"]);
-        $communities = limpiar_dato($_POST["communities"]);
-        $Zcode = limpiar_dato($_POST["Zcode"]);
-        $format = limpiar_dato($_POST["format"]);
-        $newscheck = limpiar_dato($_POST["newscheck"]);
-        $text = limpiar_dato($_POST["text"]);
 
+    } else {
+        echo "No llegaron datos requeridos";
     }
+} else{
+    echo "No hemos recibido por el métedo POST";
 }
 
   
-if (isset($_POST["topics"])){
-    $topics = limpiar_dato($_POST["topics"]);
-} else{
-    $topics = NULL;
-}
-// ============================================================= BORRAME
-
-echo "<br><strong>Name: </strong>".$name ."<br>";
-
-echo "<br><strong>Email: </strong>".$email ."<br>";
-
-echo "<br><strong>Teléfono: </strong>".$phone ."<br>";
-
-// ============================================================= BORRAME
-} else{
-if ($name_err == true){
-    echo "La validación de Nombre ha fallado<br>";
-} elseif ($email_err == true) {
-    echo "La validación de Email ha fallado<br>";
-} elseif ($phone_err == true) {
-    echo "La validación de Teléfono ha fallado<br>";
-}
-}
-} else {
-echo "Uno de los datos requeridos no ha sido rellenado";
-}
-} else{
-echo "No hemos recibido por el métedo POST";
-}
 
 // ======================  BORRAME
 
